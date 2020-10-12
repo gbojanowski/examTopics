@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0dab02c-0527-4727-82c1-23c8f25d8e58" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/playground.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,21 +29,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="102">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="playground.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="playground.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playground.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="190" column="1" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="1" />
+            <state relative-caret-position="172">
+              <caret line="195" column="5" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
               <folding>
+                <element signature="n#!!block;n#typeQuestionSet#0" />
                 <element signature="n#!!block;n#fillAQuestionNames#0" />
                 <element signature="n#!!block;n#chooseQuestions#0" />
                 <element signature="e#1556#1572#0" />
@@ -58,7 +60,6 @@
                 <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
                 <element signature="e#7072#7088#0" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,6 +91,7 @@
       <find>jContent</find>
       <find>console.lo</find>
       <find>onclick</find>
+      <find>console</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,8 +104,8 @@
         <option value="$PROJECT_DIR$/examTopicsAwsCloudPractitioner401-454.json" />
         <option value="$PROJECT_DIR$/jsonRewriter.js" />
         <option value="$PROJECT_DIR$/examTopics.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/playground.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -240,12 +242,12 @@
       <updated>1600854112523</updated>
       <workItem from="1600854118954" duration="131803000" />
       <workItem from="1601651656209" duration="832000" />
-      <workItem from="1602160524297" duration="50119000" />
+      <workItem from="1602160524297" duration="50653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182754000" />
+    <option name="totallyTimeSpent" value="183288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-1088" width="1936" height="1096" extended-state="6" />
@@ -338,8 +340,14 @@
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/playground.js</url>
+          <line>198</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -355,6 +363,7 @@
         <state relative-caret-position="3536">
           <caret line="208" selection-start-line="208" selection-end-line="208" />
           <folding>
+            <element signature="n#!!block;n#typeQuestionSet#0" />
             <element signature="n#!!block;n#fillAQuestionNames#0" />
             <element signature="n#!!block;n#chooseQuestions#0" />
             <element signature="e#1556#1572#0" />
@@ -370,7 +379,6 @@
             <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="e#7072#7088#0" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -397,6 +405,7 @@
         <state relative-caret-position="1054">
           <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
           <folding>
+            <element signature="n#!!block;n#typeQuestionSet#0" />
             <element signature="n#!!block;n#fillAQuestionNames#0" />
             <element signature="n#!!block;n#chooseQuestions#0" />
             <element signature="e#1556#1572#0" />
@@ -412,7 +421,6 @@
             <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="e#7072#7088#0" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -502,18 +510,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playground.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="190" column="1" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="1" />
+        <state relative-caret-position="172">
+          <caret line="195" column="5" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
           <folding>
+            <element signature="n#!!block;n#typeQuestionSet#0" />
             <element signature="n#!!block;n#fillAQuestionNames#0" />
             <element signature="n#!!block;n#chooseQuestions#0" />
             <element signature="e#1556#1572#0" />
@@ -529,8 +531,14 @@
             <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
             <element signature="e#7072#7088#0" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>
