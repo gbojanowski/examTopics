@@ -13,7 +13,8 @@ async function fetchJson(){
 }
 
 function typeQuestionSet(jQuestionSet, index){
-    var questionHTML = '';
+    var questionHTML = '<div id="questions"><h1>Question: '+(index+1)+'/'+nOfQuestions+'</h1>';
+
     var question =aQuestionsNames[aQuestionSet[index]];
 
     var answers = "";
@@ -43,7 +44,7 @@ function typeQuestionSet(jQuestionSet, index){
         questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + index + '\')"/>';
         questionHTML+='<input type="submit" value="finish test" onclick="return finish(\'' + question + '\')"/>';
     }
-    questionHTML+="</form>";
+    questionHTML+="</form></div>";
 
     document.getElementById('output').innerHTML = questionHTML;
 }
@@ -136,10 +137,7 @@ function finishTest(){
 
 
     // var correctStyle = "border: 2px solid green; border-radius: 7px; padding: 5px; ";
-    var correctUnCheckedStyle = "font-weight: bold; color: green; ";
-    var correctCheckedStyle = "font-weight: bold; color: green; border: 2px solid green; border-radius: 7px;";
-    var incorrectCheckedStyle = "border: 2px solid red; border-radius: 7px; ";
-    var defaultStyle = 'border: 0px';
+
 
     for(question in jQuestionSet.Questions){
         var oddity;
@@ -151,19 +149,19 @@ function finishTest(){
             isQuestionOdd = true;
         }
         var isQuestionAnsweredCorrectly = true;
-        var questionStyle = incorrectCheckedStyle;
+        // var questionStyle = incorrectCheckedStyle;
 
         for(answer in jQuestionSet.Questions[question].answers){
             var answerIsChecked = jQuestionSet.Questions[question].answers[answer].chosen;
             if (answerIsChecked){
                 isQuestionAnswered = true;
-                var questionStyle = defaultStyle;
+                // var questionStyle = defaultStyle;
                 break;
             }
         }
 
         var questionText = '<h3>'+jQuestionSet.Questions[question].question+'</h3>';
-        summaryPageContent+='<div class="'+oddity+'" style="'+questionStyle+'"> ';
+        summaryPageContent+='<div class="'+oddity+'" style="questionStyle"> ';
 
         summaryPageContent+='<h4>'+question+'<span name="'+question+'" class="questionFailed">FAILED</span></h4>';
 
@@ -172,15 +170,15 @@ function finishTest(){
             var answerIsCorrect = jQuestionSet.Questions[question].answers[answer].correct;
             var answerIsChecked = jQuestionSet.Questions[question].answers[answer].chosen;
             if(answerIsCorrect && answerIsChecked){
-                summaryPageContent+='<div style="'+correctCheckedStyle+'">'+answer+'</div>';
+                summaryPageContent+='<div class="correctCheckedStyle">'+answer+'</div>';
             } else if(!answerIsCorrect && answerIsChecked){
-                summaryPageContent+='<div style="'+incorrectCheckedStyle+'">'+answer+'</div>';
+                summaryPageContent+='<div class="incorrectCheckedStyle">'+answer+'</div>';
                 isQuestionAnsweredCorrectly = false;
             }else if(answerIsCorrect && !answerIsChecked){
-                summaryPageContent+='<div style="'+correctUnCheckedStyle+'">'+answer+'</div>';
+                summaryPageContent+='<div class="correctUnCheckedStyle">'+answer+'</div>';
                 isQuestionAnsweredCorrectly = false;
             } else {
-                summaryPageContent+='<div style="'+answerStyle+'">'+answer+'</div>';
+                summaryPageContent+='<div class="answerStyle">'+answer+'</div>';
             }
         }
         if(isQuestionAnsweredCorrectly){
@@ -189,7 +187,7 @@ function finishTest(){
         }
         summaryPageContent+='<br/>';
         var explanation = jQuestionSet.Questions[question].explanation;
-        summaryPageContent+='<div><span  style="font-weight: bold">Explanation:</span>'+explanation+'</div>>'
+        summaryPageContent+='<div><span name="explanation '+question+'"style="font-weight: bold" onclick="showHideExplanation(\''+question+'\')">Explanation (click):</span><p name="'+question+'">'+explanation+'</p></div>';
         summaryPageContent+='</div>';
 
 
@@ -204,9 +202,24 @@ function finishTest(){
     }
     summaryPageContent = '<h1>RESULTS: '+resultHTML+'</h1>' + '<div id="answers">'+summaryPageContent+'</div>';
     document.getElementById('output').innerHTML =summaryPageContent;
-
+    hideExplanations();
 }
 
+function hideExplanations(){
+    for (question in jQuestionSet.Questions){
+        console.log('p[name="'+question+'"]');
+        document.querySelector('p[name="'+question+'"]').style.display = "none";
+    }
+}
+
+function showHideExplanation(question){
+    var x = document.querySelector('p[name="'+question+'"]');
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
 window.onload = function(){
     fillAQuestionNames();
     determineQuestionSet();
