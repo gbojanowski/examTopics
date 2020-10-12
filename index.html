@@ -1,12 +1,54 @@
-<!DOCTYPE html>
+<html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>examTopics</title>
+    <style type="text/css">
+        #wrapper {
+            margin: auto;
+            text-align: left;
+            width: 760px;
+            }
+        form{
+            background: #eeeeee;
+            padding: 1em;
+        }
+        #answers{
+            padding: 1em;
+        }
+        input[value="next question"]{
+            float: right;
+        }
+        input[value="finish test"]{
+            float: right;
+        }
+        .even {
+            background: #eeeeee;
+            margin-bottom: 1em;
+            padding: 1em;
+        }
+        .odd {
+            background: #dddddd;
+            margin-bottom: 1em;
+            padding: 1em;
+        }
+        .questionFailed{
+            color: red;
+            font-weight: bolder;
+            margin-left: 2em;
+        }
+        .questionPassed{
+            color: green;
+            font-weight: bolder;
+            margin-left: 2em;
+        }
+    </style>
 
 </head>
 <body>
-    <div id="output">Nothing...</div>
+    <div id="wrapper">
+        <div id="output">Nothing...</div>
+    </div>
     <!--<script src = "examTopics.js"></script>-->
     <script src = "playground.js"></script>
 </body>

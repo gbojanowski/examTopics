@@ -13,39 +13,41 @@ async function fetchJson(){
 }
 
 function typeQuestionSet(jQuestionSet, index){
+    var questionHTML = '';
     var question =aQuestionsNames[aQuestionSet[index]];
 
+    var answers = "";
+    document.getElementById('output').innerHTML = '';
+    questionHTML+='<form name="'+question+'" />';
+    questionHTML+='<h4>'+question+'</h4>';
+    var questionText = '<h3>'+jQuestionSet.Questions[question].question+'</h3>';
+    questionHTML+=questionText;
+    for (answer in jQuestionSet.Questions[question].answers){
+        (function (answer) {
+            if (countPropAnswers(jQuestionSet, question) > 1) {
+                answers = composeCheckboxAnswer(question, answers, answer);
+            } else {
+                answers = composeRadiobuttonAnswer(question, answers, answer);
+            }
+        }).call(this, answer);
+    };
+    answers += "</br>";
+    questionHTML+=answers;
+    if(index == 0) {
+        questionHTML+='<input type="button" value="next question" onclick="next(\'' + question + '\',\'' + index + '\')"/>';
+    }
+    else if(index > 0 && index < Object.keys(jQuestionSet.Questions).length-1) {
+        questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + index + '\')"/>';
+        questionHTML+='<input type="button" value="next question" onclick="next(\'' + question + '\',\'' + index + '\')"/>';
+    }  else {
+        questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + index + '\')"/>';
+        questionHTML+='<input type="submit" value="finish test" onclick="return finish(\'' + question + '\')"/>';
+    }
+    questionHTML+="</form>";
 
-        var answers = "";
-        document.open ();
-        document.close ();
-        document.write('<form name="'+question+'" />');
-        var questionText = '<h4>'+jQuestionSet.Questions[question].question+'</h4>';
-        document.write(questionText);
-        for (answer in jQuestionSet.Questions[question].answers){
-            (function (answer) {
-                if (countPropAnswers(jQuestionSet, question) > 1) {
-                    answers = composeCheckboxAnswer(question, answers, answer);
-                } else {
-                    answers = composeRadiobuttonAnswer(question, answers, answer);
-                }
-            }).call(this, answer);
-        };
-        answers += "</br>";
-        document.write(answers);
-        if(index == 0) {
-            document.write('<input type="button" value="next question" onclick="next(\'' + question + '\',\'' + index + '\')"/>');
-        }
-        else if(index > 0 && index < Object.keys(jQuestionSet.Questions).length-1) {
-            document.write('<input type="button" value="previous question" onclick="previous(\'' + index + '\')"/>');
-            document.write('<input type="button" value="next question" onclick="next(\'' + question + '\',\'' + index + '\')"/>');
-        }  else {
-            document.write('<input type="button" value="previous question" onclick="previous(\'' + index + '\')"/>');
-            document.write('<input type="submit" value="finish test" onclick="return finish(\'' + question + '\')"/>');
-        }
-        document.write("</form>")
-    // }
+    document.getElementById('output').innerHTML = questionHTML;
 }
+
 function fillAQuestionNames(){
     for(question in jContent.Questions){
         aQuestionsNames.push(question);
@@ -73,14 +75,12 @@ function countPropAnswers(jContent, question){
     };
     return propAnswersCounter;
 }
-
 function isAnswerChecked(question, answers, answer){
     if (jQuestionSet.Questions[question].answers[answer].chosen == true){
         return 'checked="checked"';
     }
     return '';
 }
-
 function composeCheckboxAnswer(question, answers, answer){
     var isChecked = isAnswerChecked(question, answers, answer);
     answers += '<input type="checkbox" '+isChecked+' value="'+answer+'" name="'+question+'">' +
@@ -118,14 +118,22 @@ function finish(question){
     submitAnswer(question);
     finishTest();
 }
-
+function markQuestionAsPassed(question, summaryPageContent){
+    var failed = '<h4>'+question+'<span name="'+question+'" class="questionFailed">FAILED</span></h4>';
+    var passed = '<h4>'+question+'<span name="'+question+'" class="questionPassed">PASSED</span></h4>'
+    if(summaryPageContent.includes(failed)){
+        return summaryPageContent.replace(failed, passed);
+    }
+    console.log(failed+' substring does not exist in: '+summaryPageContent);
+    return summaryPageContent;
+}
 function finishTest(){
+    document.getElementById('output').innerHTML = '';
     var correctAnswersCount = 0;
-    document.body.innerHTML = '';
     var summaryPageContent = '';
-
-
     var answerStyle ='';
+    var isQuestionOdd = true;
+
 
     // var correctStyle = "border: 2px solid green; border-radius: 7px; padding: 5px; ";
     var correctUnCheckedStyle = "font-weight: bold; color: green; ";
@@ -134,6 +142,14 @@ function finishTest(){
     var defaultStyle = 'border: 0px';
 
     for(question in jQuestionSet.Questions){
+        var oddity;
+        if(isQuestionOdd){
+            oddity = "odd";
+            isQuestionOdd = false;
+        } else {
+            oddity = "even";
+            isQuestionOdd = true;
+        }
         var isQuestionAnsweredCorrectly = true;
         var questionStyle = incorrectCheckedStyle;
 
@@ -147,7 +163,10 @@ function finishTest(){
         }
 
         var questionText = '<h3>'+jQuestionSet.Questions[question].question+'</h3>';
-        summaryPageContent+='<div style="'+questionStyle+'"> ';
+        summaryPageContent+='<div class="'+oddity+'" style="'+questionStyle+'"> ';
+
+        summaryPageContent+='<h4>'+question+'<span name="'+question+'" class="questionFailed">FAILED</span></h4>';
+
         summaryPageContent+=questionText;
         for (answer in jQuestionSet.Questions[question].answers){
             var answerIsCorrect = jQuestionSet.Questions[question].answers[answer].correct;
@@ -166,6 +185,7 @@ function finishTest(){
         }
         if(isQuestionAnsweredCorrectly){
             correctAnswersCount++;
+            summaryPageContent = markQuestionAsPassed(question, summaryPageContent);
         }
         summaryPageContent+='<br/>';
         var explanation = jQuestionSet.Questions[question].explanation;
@@ -176,15 +196,19 @@ function finishTest(){
     }
     console.log("correctAnswersCount: "+correctAnswersCount);
     console.log("nOfQuestions: "+nOfQuestions);
-    summaryPageContent = '<h1>RESULTS: '+((correctAnswersCount/nOfQuestions)*100).toFixed(2) +'%'+'</h1>' + summaryPageContent;
-    document.write(summaryPageContent);
+    var result = ((correctAnswersCount/nOfQuestions)*100).toFixed(2);
+    var resultHTML ='<span style="color: red">'+((correctAnswersCount/nOfQuestions)*100).toFixed(2) +'%, FAILED'+'</span>';;
+
+    if (result >= 70){
+        resultHTML = '<span style="color: green">'+((correctAnswersCount/nOfQuestions)*100).toFixed(2) +'%, PASSED'+'</span>';
+    }
+    summaryPageContent = '<h1>RESULTS: '+resultHTML+'</h1>' + '<div id="answers">'+summaryPageContent+'</div>';
+    document.getElementById('output').innerHTML =summaryPageContent;
+
 }
 
 window.onload = function(){
     fillAQuestionNames();
     determineQuestionSet();
     typeQuestionSet(jQuestionSet, 0);
-
-
-
 }
