@@ -188,15 +188,14 @@ function finishTest(){
         summaryPageContent+='<br/>';
         var explanation = jQuestionSet.Questions[question].explanation;
         summaryPageContent+='<div><span name="explanation '+question+'"style="font-weight: bold" onclick="showHideExplanation(\''+question+'\')">Explanation (click):</span><p name="'+question+'">'+explanation+'</p></div>';
+
+        summaryPageContent+='<p>Answer controversy level: '+jQuestionSet.Questions[question].discussions+'</p>';
         summaryPageContent+='</div>';
 
 
     }
-    console.log("correctAnswersCount: "+correctAnswersCount);
-    console.log("nOfQuestions: "+nOfQuestions);
     var result = ((correctAnswersCount/nOfQuestions)*100).toFixed(2);
     var resultHTML ='<span style="color: red">'+((correctAnswersCount/nOfQuestions)*100).toFixed(2) +'%, FAILED'+'</span>';;
-
     if (result >= 70){
         resultHTML = '<span style="color: green">'+((correctAnswersCount/nOfQuestions)*100).toFixed(2) +'%, PASSED'+'</span>';
     }
@@ -207,7 +206,6 @@ function finishTest(){
 
 function hideExplanations(){
     for (question in jQuestionSet.Questions){
-        console.log('p[name="'+question+'"]');
         document.querySelector('p[name="'+question+'"]').style.display = "none";
     }
 }
