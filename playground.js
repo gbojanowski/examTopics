@@ -120,8 +120,11 @@ function finish(question){
 }
 
 function finishTest(){
+    var correctAnswersCount = 0;
     document.body.innerHTML = '';
-    document.write('<h1>RESULTS: </h1>');
+    var summaryPageContent = '';
+
+
     var answerStyle ='';
 
     // var correctStyle = "border: 2px solid green; border-radius: 7px; padding: 5px; ";
@@ -131,7 +134,7 @@ function finishTest(){
     var defaultStyle = 'border: 0px';
 
     for(question in jQuestionSet.Questions){
-        var correctAnswersCount = 0;
+        var isQuestionAnsweredCorrectly = true;
         var questionStyle = incorrectCheckedStyle;
 
         for(answer in jQuestionSet.Questions[question].answers){
@@ -144,31 +147,37 @@ function finishTest(){
         }
 
         var questionText = '<h3>'+jQuestionSet.Questions[question].question+'</h3>';
-        document.write('<div style="'+questionStyle+'"> ');
-        document.write(questionText);
+        summaryPageContent+='<div style="'+questionStyle+'"> ';
+        summaryPageContent+=questionText;
         for (answer in jQuestionSet.Questions[question].answers){
             var answerIsCorrect = jQuestionSet.Questions[question].answers[answer].correct;
             var answerIsChecked = jQuestionSet.Questions[question].answers[answer].chosen;
-
             if(answerIsCorrect && answerIsChecked){
-                document.write('<div style="'+correctCheckedStyle+'">'+answer+'</div>');
-                correctAnswersCount ++;
+                summaryPageContent+='<div style="'+correctCheckedStyle+'">'+answer+'</div>';
             } else if(!answerIsCorrect && answerIsChecked){
-                document.write('<div style="'+incorrectCheckedStyle+'">'+answer+'</div>');
+                summaryPageContent+='<div style="'+incorrectCheckedStyle+'">'+answer+'</div>';
+                isQuestionAnsweredCorrectly = false;
             }else if(answerIsCorrect && !answerIsChecked){
-                document.write('<div style="'+correctUnCheckedStyle+'">'+answer+'</div>');
+                summaryPageContent+='<div style="'+correctUnCheckedStyle+'">'+answer+'</div>';
+                isQuestionAnsweredCorrectly = false;
             } else {
-                document.write('<div style="'+answerStyle+'">'+answer+'</div>');
+                summaryPageContent+='<div style="'+answerStyle+'">'+answer+'</div>';
             }
         }
-        document.write('<br/>');
+        if(isQuestionAnsweredCorrectly){
+            correctAnswersCount++;
+        }
+        summaryPageContent+='<br/>';
         var explanation = jQuestionSet.Questions[question].explanation;
-        document.write('<div><span  style="font-weight: bold">Explanation:</span>'+explanation+'</div>>')
-        document.write('</div>');
+        summaryPageContent+='<div><span  style="font-weight: bold">Explanation:</span>'+explanation+'</div>>'
+        summaryPageContent+='</div>';
 
 
     }
-
+    console.log("correctAnswersCount: "+correctAnswersCount);
+    console.log("nOfQuestions: "+nOfQuestions);
+    summaryPageContent = '<h1>RESULTS: '+((correctAnswersCount/nOfQuestions)*100).toFixed(2) +'%'+'</h1>' + summaryPageContent;
+    document.write(summaryPageContent);
 }
 
 window.onload = function(){

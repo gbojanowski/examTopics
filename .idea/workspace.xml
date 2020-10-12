@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0dab02c-0527-4727-82c1-23c8f25d8e58" name="Default" comment="" />
+    <list default="true" id="c0dab02c-0527-4727-82c1-23c8f25d8e58" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +41,8 @@
       <file leaf-file-name="playground.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playground.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="159" column="20" lean-forward="true" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="20" />
+            <state relative-caret-position="279">
+              <caret line="178" column="91" selection-start-line="178" selection-start-column="91" selection-end-line="178" selection-end-column="91" />
               <folding>
                 <element signature="n#!!block;n#fillAQuestionNames#0" />
                 <element signature="n#!!block;n#countPropAnswers#0" />
@@ -49,7 +52,6 @@
                 <element signature="n#!!block;n#submitAnswer#0" />
                 <element signature="n#!!block;n#next#0" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#4942#5079#0" />
               </folding>
             </state>
           </provider>
@@ -81,6 +83,9 @@
       <find>jContent</find>
       <find>console.lo</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -115,6 +120,7 @@
     <option name="width" value="1918" />
     <option name="height" value="1078" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -226,12 +232,12 @@
       <updated>1600854112523</updated>
       <workItem from="1600854118954" duration="131803000" />
       <workItem from="1601651656209" duration="832000" />
-      <workItem from="1602160524297" duration="30301000" />
+      <workItem from="1602160524297" duration="34557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162936000" />
+    <option name="totallyTimeSpent" value="167192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-1088" width="1936" height="1096" extended-state="6" />
@@ -242,15 +248,15 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.25678498" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.50159913" side_tool="true" visible="true" weight="0.32881" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.29317698" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81606764" weight="0.31329113" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.32881" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49840087" visible="true" weight="0.32881" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22867803" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22867803" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.32881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -349,7 +355,6 @@
             <element signature="n#!!block;n#submitAnswer#0" />
             <element signature="n#!!block;n#next#0" />
             <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#4942#5079#0" />
           </folding>
         </state>
       </provider>
@@ -384,7 +389,6 @@
             <element signature="n#!!block;n#submitAnswer#0" />
             <element signature="n#!!block;n#next#0" />
             <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#4942#5079#0" />
           </folding>
         </state>
       </provider>
@@ -483,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playground.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="159" column="20" lean-forward="true" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="20" />
+        <state relative-caret-position="279">
+          <caret line="178" column="91" selection-start-line="178" selection-start-column="91" selection-end-line="178" selection-end-column="91" />
           <folding>
             <element signature="n#!!block;n#fillAQuestionNames#0" />
             <element signature="n#!!block;n#countPropAnswers#0" />
@@ -494,7 +498,6 @@
             <element signature="n#!!block;n#submitAnswer#0" />
             <element signature="n#!!block;n#next#0" />
             <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#4942#5079#0" />
           </folding>
         </state>
       </provider>
