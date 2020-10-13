@@ -38,10 +38,10 @@ function typeQuestionSet(jQuestionSet, index){
         questionHTML+='<input type="button" value="next question" onclick="next(\'' + question + '\',\'' + index + '\')"/>';
     }
     else if(index > 0 && index < Object.keys(jQuestionSet.Questions).length-1) {
-        questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + index + '\')"/>';
+        questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + question + '\',\'' + index + '\')"/>';
         questionHTML+='<input type="button" value="next question" onclick="next(\'' + question + '\',\'' + index + '\')"/>';
     }  else {
-        questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + index + '\')"/>';
+        questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + question + '\',\'' + index + '\')"/>';
         questionHTML+='<input type="submit" value="finish test" onclick="return finish(\'' + question + '\')"/>';
     }
     questionHTML+="</form></div>";
@@ -111,7 +111,8 @@ function next(question, index){
     index++;
     typeQuestionSet(jQuestionSet, index)
 }
-function previous(index){
+function previous(question, index){
+    submitAnswer(question);
     index--;
     typeQuestionSet(jQuestionSet,index);
 }
