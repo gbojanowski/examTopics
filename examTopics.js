@@ -1,5 +1,5 @@
 var jContent = fetchJson();
-var nOfQuestions = 1;
+var nOfQuestions = 3;
 var aQuestionsNames = [];
 var aQuestionSet = [];
 var jQuestionSet=JSON.parse('{"Questions":{}}');
@@ -9,34 +9,46 @@ async function fetchJson(){
     const data = await fetch('http://localhost:63342/examTopics/awsCloudPractitioner.json')
         .then(results=>results.json())
     jContent = data;
-    console.log(jContent);
     return (data);
 }
 
-function typeQuestionSet(jQuestionSet){
-    for (question in jQuestionSet.Questions){
-        var answers = "";
-        document.write('<form name="'+question+'" />');
-        var questionText = '<h4>'+jQuestionSet.Questions[question].question+'</h4>';
-        document.write(questionText);
+function typeQuestionSet(jQuestionSet, index){
+    var questionHTML = '<div id="questions"><h1>Question: '+(index+1)+'/'+nOfQuestions+'</h1>';
 
+    var question =aQuestionsNames[aQuestionSet[index]];
 
-        for (answer in jQuestionSet.Questions[question].answers){
-            (function (answer) {
-                if (countPropAnswers(jQuestionSet, question) > 1) {
-                    answers = composeCheckboxAnswer(answers, answer);
-                } else {
-                    answers = composeRadiobuttonAnswer(answers, answer);
-                }
-            }).call(this, answer);
-        };
-
-        answers += "</br>";
-        document.write(answers);
-        document.write('<input type="button" value="submit answer" onclick="submitAnswer(\''+question+'\')"/>');
-        document.write("</form>")
+    var answers = "";
+    document.getElementById('output').innerHTML = '';
+    questionHTML+='<form name="'+question+'" />';
+    questionHTML+='<h4>'+question+'</h4>';
+    var questionText = '<h3>'+jQuestionSet.Questions[question].question+'</h3>';
+    questionHTML+=questionText;
+    for (answer in jQuestionSet.Questions[question].answers){
+        (function (answer) {
+            if (countPropAnswers(jQuestionSet, question) > 1) {
+                answers = composeCheckboxAnswer(question, answers, answer);
+            } else {
+                answers = composeRadiobuttonAnswer(question, answers, answer);
+            }
+        }).call(this, answer);
+    };
+    answers += "</br>";
+    questionHTML+=answers;
+    if(index == 0) {
+        questionHTML+='<input type="button" value="next question" onclick="next(\'' + question + '\',\'' + index + '\')"/>';
     }
+    else if(index > 0 && index < Object.keys(jQuestionSet.Questions).length-1) {
+        questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + question + '\',\'' + index + '\')"/>';
+        questionHTML+='<input type="button" value="next question" onclick="next(\'' + question + '\',\'' + index + '\')"/>';
+    }  else {
+        questionHTML+='<input type="button" value="previous question" onclick="previous(\'' + question + '\',\'' + index + '\')"/>';
+        questionHTML+='<input type="submit" value="finish test" onclick="return finish(\'' + question + '\')"/>';
+    }
+    questionHTML+="</form></div>";
+
+    document.getElementById('output').innerHTML = questionHTML;
 }
+
 function fillAQuestionNames(){
     for(question in jContent.Questions){
         aQuestionsNames.push(question);
@@ -44,10 +56,7 @@ function fillAQuestionNames(){
     return aQuestionsNames;
 }
 function determineQuestionSet(){
-    console.log("Object.keys(jContent).length");
     var totalNumberOfQuestions = Object.keys(jContent.Questions).length;
-
-
     for(let i = 0; i<nOfQuestions; i++) {
         var randomNumber = Math.floor(Math.random() * totalNumberOfQuestions);
         aQuestionSet.push(randomNumber);
@@ -55,11 +64,8 @@ function determineQuestionSet(){
     for (var index =0; index <aQuestionSet.length; index++ ){
         var questionIndex = aQuestionSet[index];
         var chosenQuestion = aQuestionsNames[questionIndex];
-        console.log(jContent.Questions[chosenQuestion]);
         jQuestionSet.Questions[chosenQuestion] = jContent.Questions[chosenQuestion];
-        console.log(jQuestionSet);
     }
-
 }
 function countPropAnswers(jContent, question){
     var propAnswersCounter = 0
@@ -70,88 +76,146 @@ function countPropAnswers(jContent, question){
     };
     return propAnswersCounter;
 }
-function composeCheckboxAnswer(answers, answer){
-    answers += '<input type="checkbox" value="'+answer+'" name="'+question+'">' +
+function isAnswerChecked(question, answers, answer){
+    if (jQuestionSet.Questions[question].answers[answer].chosen == true){
+        return 'checked="checked"';
+    }
+    return '';
+}
+function composeCheckboxAnswer(question, answers, answer){
+    var isChecked = isAnswerChecked(question, answers, answer);
+    answers += '<input type="checkbox" '+isChecked+' value="'+answer+'" name="'+question+'">' +
         '<label>' + answer + '</label></br>';
     return answers;
 }
-function composeRadiobuttonAnswer(answers, answer){
-    answers += '<input type="radio" value="'+answer+'" name="'+question+'">' +
+function composeRadiobuttonAnswer(question, answers, answer){
+    var isChecked = isAnswerChecked(question, answers, answer);
+    answers += '<input type="radio" '+isChecked+' value="'+answer+'" name="'+question+'">' +
         '<label>' + answer + '</label></br>';
     return answers;
 }
 function submitAnswer(question){
     var answers = document.getElementsByName(question);
     var index = 1;
-    console.log('answers:');
-    console.log(answers);
-    for(answer in jContent.Questions[question].answers){
+    for(answer in jQuestionSet.Questions[question].answers){
         if (answers[index].checked){
-            jContent.Questions[question].answers[answer].chosen = true;
+            jQuestionSet.Questions[question].answers[answer].chosen = true;
+        } else if (!answer[index].checked){
+            jQuestionSet.Questions[question].answers[answer].chosen = false;
         }
         index ++;
     }
-    console.log(jContent);
-
-
-
-
+}
+function next(question, index){
+    submitAnswer(question);
+    index++;
+    typeQuestionSet(jQuestionSet, index)
+}
+function previous(question, index){
+    submitAnswer(question);
+    index--;
+    typeQuestionSet(jQuestionSet,index);
+}
+function finish(question){
+    submitAnswer(question);
+    finishTest();
+}
+function markQuestionAsPassed(question, summaryPageContent){
+    var failed = '<h4>'+question+'<span name="'+question+'" class="questionFailed">FAILED</span></h4>';
+    var passed = '<h4>'+question+'<span name="'+question+'" class="questionPassed">PASSED</span></h4>'
+    if(summaryPageContent.includes(failed)){
+        return summaryPageContent.replace(failed, passed);
+    }
+    console.log(failed+' substring does not exist in: '+summaryPageContent);
+    return summaryPageContent;
 }
 function finishTest(){
-    console.log("finishTest()");
-    document.body.innerHTML = '';
-    document.write('<h1>RESULTS: </h1>');
+    document.getElementById('output').innerHTML = '';
+    var correctAnswersCount = 0;
+    var summaryPageContent = '';
     var answerStyle ='';
-
-    // var correctStyle = "border: 2px solid green; border-radius: 7px; padding: 5px; ";
-    var correctUnCheckedStyle = "font-weight: bold; color: green; ";
-    var correctCheckedStyle = "font-weight: bold; color: green; border: 2px solid green; border-radius: 7px;";
-    var incorrectCheckedStyle = "border: 2px solid red; border-radius: 7px; ";
-    var defaultStyle = 'border: 0px';
-
+    var isQuestionOdd = true;
     for(question in jQuestionSet.Questions){
-        var questionStyle = incorrectCheckedStyle;
+        var oddity;
+        if(isQuestionOdd){
+            oddity = "odd";
+            isQuestionOdd = false;
+        } else {
+            oddity = "even";
+            isQuestionOdd = true;
+        }
+        var isQuestionAnsweredCorrectly = true;
+        // var questionStyle = incorrectCheckedStyle;
 
         for(answer in jQuestionSet.Questions[question].answers){
             var answerIsChecked = jQuestionSet.Questions[question].answers[answer].chosen;
             if (answerIsChecked){
                 isQuestionAnswered = true;
-                var questionStyle = defaultStyle;
-
+                // var questionStyle = defaultStyle;
                 break;
             }
         }
 
         var questionText = '<h3>'+jQuestionSet.Questions[question].question+'</h3>';
-        document.write('<div style="'+questionStyle+'"> ');
-        document.write(questionText);
+        summaryPageContent+='<div class="'+oddity+'" style="questionStyle"> ';
+
+        summaryPageContent+='<h4>'+question+'<span name="'+question+'" class="questionFailed">FAILED</span></h4>';
+
+        summaryPageContent+=questionText;
         for (answer in jQuestionSet.Questions[question].answers){
             var answerIsCorrect = jQuestionSet.Questions[question].answers[answer].correct;
             var answerIsChecked = jQuestionSet.Questions[question].answers[answer].chosen;
-
             if(answerIsCorrect && answerIsChecked){
-                document.write('<div style="'+correctCheckedStyle+'">'+answer+'</div>');
+                summaryPageContent+='<div class="correctCheckedStyle">'+answer+'</div>';
             } else if(!answerIsCorrect && answerIsChecked){
-                document.write('<div style="'+incorrectCheckedStyle+'">'+answer+'</div>');
+                summaryPageContent+='<div class="incorrectCheckedStyle">'+answer+'</div>';
+                isQuestionAnsweredCorrectly = false;
             }else if(answerIsCorrect && !answerIsChecked){
-                document.write('<div style="'+correctUnCheckedStyle+'">'+answer+'</div>');
+                summaryPageContent+='<div class="correctUnCheckedStyle">'+answer+'</div>';
+                isQuestionAnsweredCorrectly = false;
             } else {
-                document.write('<div style="'+answerStyle+'">'+answer+'</div>');
+                summaryPageContent+='<div class="answerStyle">'+answer+'</div>';
             }
         }
-        document.write('<br/>');
+        if(isQuestionAnsweredCorrectly){
+            correctAnswersCount++;
+            summaryPageContent = markQuestionAsPassed(question, summaryPageContent);
+        }
+        summaryPageContent+='<br/>';
         var explanation = jQuestionSet.Questions[question].explanation;
-        document.write('<div><span  style="font-weight: bold">Explanation:</span>'+explanation+'</div>>')
-        document.write('</div>');
-    }
+        summaryPageContent+='<div><span name="explanation '+question+'"style="font-weight: bold" onclick="showHideExplanation(\''+question+'\')">Explanation (click):</span><p name="'+question+'">'+explanation+'</p></div>';
 
+        summaryPageContent+='<p>Answer controversy level: '+jQuestionSet.Questions[question].discussions+'</p>';
+        summaryPageContent+='</div>';
+
+
+    }
+    var result = ((correctAnswersCount/nOfQuestions)*100).toFixed(2);
+    var resultHTML ='<span style="color: red">'+((correctAnswersCount/nOfQuestions)*100).toFixed(2) +'%, FAILED'+'</span>';;
+    if (result >= 70){
+        resultHTML = '<span style="color: green">'+((correctAnswersCount/nOfQuestions)*100).toFixed(2) +'%, PASSED'+'</span>';
+    }
+    summaryPageContent = '<h1>RESULTS: '+resultHTML+'</h1>' + '<div id="answers">'+summaryPageContent+'</div>';
+    document.getElementById('output').innerHTML =summaryPageContent;
+    hideExplanations();
 }
 
+function hideExplanations(){
+    for (question in jQuestionSet.Questions){
+        document.querySelector('p[name="'+question+'"]').style.display = "none";
+    }
+}
+
+function showHideExplanation(question){
+    var x = document.querySelector('p[name="'+question+'"]');
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
 window.onload = function(){
     fillAQuestionNames();
     determineQuestionSet();
-    typeQuestionSet(jQuestionSet);
-
-    document.write('<input type="submit" value="finish test" onclick="return finishTest();"/>');
-
+    typeQuestionSet(jQuestionSet, 0);
 }

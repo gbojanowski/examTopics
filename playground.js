@@ -135,11 +135,6 @@ function finishTest(){
     var summaryPageContent = '';
     var answerStyle ='';
     var isQuestionOdd = true;
-
-
-    // var correctStyle = "border: 2px solid green; border-radius: 7px; padding: 5px; ";
-
-
     for(question in jQuestionSet.Questions){
         var oddity;
         if(isQuestionOdd){
