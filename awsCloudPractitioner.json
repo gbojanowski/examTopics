@@ -4952,19 +4952,19 @@
       "question": "Which services manage and automate application deployments on AWS? (Choose two.)",
       "answers": {
         "A. AWS Elastic Beanstalk": {
-          "correct": false,
+          "correct": true,
           "chosen": false
         },
         "B. AWS CodeCommit": {
-          "correct": true,
+          "correct": false,
           "chosen": false
         },
         "C. AWS Data Pipeline": {
-          "correct": true,
+          "correct": false,
           "chosen": false
         },
         "D. AWS CloudFormation": {
-          "correct": false,
+          "correct": true,
           "chosen": false
         },
         "E. AWS Config": {
@@ -4972,8 +4972,8 @@
           "chosen": false
         }
       },
-      "explanation": "Reference: https://aws.amazon.com/getting-started/tutorials/continuous-deployment-pipeline/",
-      "discussions": "27"
+      "explanation": "AWS CodeCommit is AWSs github; AWS Data Pipeline transforms data, for example if you transfer data from dynamoDB to S3",
+      "discussions": "answer was audited"
     },
     "Question #210 Topic 1": {
       "question": "A user wants guidance on possible savings when migrating from on-premises to AWS. Which tool is suitable for this scenario?",
