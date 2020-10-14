@@ -4972,7 +4972,7 @@
           "chosen": false
         }
       },
-      "explanation": "AWS CodeCommit is AWSs github; AWS Data Pipeline transforms data, for example if you transfer data from dynamoDB to S3",
+      "explanation": "AWS CodeCommit is AWSs github; AWS Data Pipeline transforms data, for example if you transfer data from dynamoDB to S3; AWS Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations.",
       "discussions": "answer was audited"
     },
     "Question #210 Topic 1": {
