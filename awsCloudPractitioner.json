@@ -4703,11 +4703,11 @@
           "chosen": false
         },
         "D. Data transfer costs": {
-          "correct": false,
+          "correct": true,
           "chosen": false
         },
         "E. Network infrastructure costs": {
-          "correct": true,
+          "correct": false,
           "chosen": false
         },
         "F. Hardware lifecycle costs": {
@@ -4716,7 +4716,8 @@
         }
       },
       "explanation": "Reference: https://aws.amazon.com/blogs/aws/the-new-aws-tco-calculator/",
-      "discussions": "25"
+      "discussions": "audited"
+//      "discussions": "25"
     },
     "Question #199 Topic 1": {
       "question": "What time-savings advantage is offered with the use of Amazon Rekognition?",
@@ -10384,7 +10385,7 @@
       "question": "Which Amazon S3 storage class is optimized to provide access to data with lower resiliency requirements, but rapid access when needed such as duplicate backups?",
       "answers": {
         "A. Amazon S3 Standard": {
-          "correct": true,
+          "correct": false,
           "chosen": false
         },
         "B. Amazon S3 Glacier Deep Archive": {
@@ -10392,7 +10393,7 @@
           "chosen": false
         },
         "C. Amazon S3 One Zone-Infrequent Access": {
-          "correct": false,
+          "correct": true,
           "chosen": false
         },
         "D. Amazon S3 Glacier": {

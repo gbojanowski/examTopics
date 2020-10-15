@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0dab02c-0527-4727-82c1-23c8f25d8e58" name="Default" comment="" />
+    <list default="true" id="c0dab02c-0527-4727-82c1-23c8f25d8e58" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="awsCloudPractitioner.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/awsCloudPractitioner.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="4975" column="40" selection-start-line="4975" selection-start-column="22" selection-end-line="4975" selection-end-column="40" />
+            <state relative-caret-position="291">
+              <caret line="4968" column="10" lean-forward="true" selection-start-line="4968" selection-start-column="10" selection-end-line="4968" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -279,12 +281,12 @@
       <updated>1600854112523</updated>
       <workItem from="1600854118954" duration="131803000" />
       <workItem from="1601651656209" duration="832000" />
-      <workItem from="1602160524297" duration="57748000" />
+      <workItem from="1602160524297" duration="58866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190383000" />
+    <option name="totallyTimeSpent" value="191501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-1088" width="1936" height="1096" extended-state="6" />
@@ -555,8 +557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/awsCloudPractitioner.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="4975" column="40" selection-start-line="4975" selection-start-column="22" selection-end-line="4975" selection-end-column="40" />
+        <state relative-caret-position="291">
+          <caret line="4968" column="10" lean-forward="true" selection-start-line="4968" selection-start-column="10" selection-end-line="4968" selection-end-column="10" />
         </state>
       </provider>
     </entry>
