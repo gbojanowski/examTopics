@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0dab02c-0527-4727-82c1-23c8f25d8e58" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/awsCloudPractitioner.json" beforeDir="false" afterPath="$PROJECT_DIR$/awsCloudPractitioner.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="awsCloudPractitioner.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/awsCloudPractitioner.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="4968" column="10" lean-forward="true" selection-start-line="4968" selection-start-column="10" selection-end-line="4968" selection-end-column="10" />
+            <state relative-caret-position="438">
+              <caret line="8092" column="253" selection-start-line="8092" selection-start-column="253" selection-end-line="8092" selection-end-column="253" />
             </state>
           </provider>
         </entry>
@@ -130,6 +130,7 @@
       <find>console.lo</find>
       <find>onclick</find>
       <find>console</find>
+      <find>Question #198 Topic</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,9 +164,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2" />
-    <option name="y" value="-1088" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="128" />
+    <option name="y" value="-1076" />
     <option name="width" value="1918" />
     <option name="height" value="1078" />
   </component>
@@ -281,15 +282,15 @@
       <updated>1600854112523</updated>
       <workItem from="1600854118954" duration="131803000" />
       <workItem from="1601651656209" duration="832000" />
-      <workItem from="1602160524297" duration="58866000" />
+      <workItem from="1602160524297" duration="61374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191501000" />
+    <option name="totallyTimeSpent" value="194009000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-1088" width="1936" height="1096" extended-state="6" />
+    <frame x="128" y="-1076" width="1918" height="1078" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -297,15 +298,15 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.32881" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50215286" side_tool="true" visible="true" weight="0.33510637" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.29317698" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81606764" weight="0.31329113" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4978678" visible="true" weight="0.32881" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49784714" visible="true" weight="0.33510637" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22867803" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23089343" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.32881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -557,8 +558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/awsCloudPractitioner.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="4968" column="10" lean-forward="true" selection-start-line="4968" selection-start-column="10" selection-end-line="4968" selection-end-column="10" />
+        <state relative-caret-position="438">
+          <caret line="8092" column="253" selection-start-line="8092" selection-start-column="253" selection-end-line="8092" selection-end-column="253" />
         </state>
       </provider>
     </entry>
