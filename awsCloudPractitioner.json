@@ -208,7 +208,7 @@
           "chosen": false
         }
       },
-      "explanation": "Reference: https://aws.amazon.com/ec2/pricing/",
+      "explanation": "<a href=\"https://aws.amazon.com/ec2/dedicated-hosts/\">Amazon EC2 Dedicated Host is also integrated with AWS License Manager, a service which helps you manage your software licenses,</a>",
       "discussions": "5"
     },
     "Question #10 Topic 1": {
@@ -6285,7 +6285,7 @@
           "chosen": false
         }
       },
-      "explanation": "Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways. You can use both IPv4 and IPv6 in your VPC for secure and easy access to resources and applications. You can easily customize the network configuration for your Amazon VPC. For example, you can create a public-facing subnet for your web servers that has access to the Internet, and place your backend systems such as databases or application servers in a private-facing subnet with no Internet access. You can leverage multiple layers of security, including security groups and network access control lists, to help control access to Amazon EC2 instances in each subnet. Reference: https://aws.amazon.com/vpc/",
+      "explanation": "Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways. You can use both IPv4 and IPv6 in your VPC for secure and easy access to resources and applications. You can easily customize the network configuration for your Amazon VPC. For example, you can create a public-facing subnet for your web servers that has access to the Internet, and place your backend systems such as databases or application servers in a private-facing subnet with no Internet access. You can leverage multiple layers of security, including security groups and network access control lists, to help control access to Amazon EC2 instances in each subnet. Reference: <a href=\"https://aws.amazon.com/vpc/\">https://aws.amazon.com/vpc/</a>",
       "discussions": "1"
     },
     "Question #21 Topic 2": {
@@ -9004,7 +9004,7 @@
           "chosen": false
         }
       },
-      "explanation": "Reference: https://aws.amazon.com/snowball/",
+      "explanation": "Reference: <a href=\"https://aws.amazon.com/snowball/\">https://aws.amazon.com/snowball/</a>; <a href=\"https://aws.amazon.com/dms/\">https://aws.amazon.com/dms/</a>",
       "discussions": "2"
     },
     "Question #134 Topic 2": {
@@ -10498,7 +10498,7 @@
           "chosen": false
         }
       },
-      "explanation": "Reference: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/data-protection.html",
+      "explanation": "By default, the log files delivered by CloudTrail to your bucket are encrypted by Amazon server-side encryption with Amazon S3-managed encryption keys (SSE-S3). To provide a security layer that is directly manageable, you can instead use server-side encryption with AWS Key Management Service–managed keys (SSE-KMS) for your CloudTrail log files.<br/>Reference: <a href=\"https://docs.aws.amazon.com/awscloudtrail/latest/userguide/data-protection.html\">data-protection</a>, <a href=\"https://docs.aws.amazon.com/awscloudtrail/latest/userguide/encrypting-cloudtrail-log-files-with-aws-kms.html\">encrypting-cloudtrail-log-files-with-aws-kms.html</a>",
       "discussions": "1"
     },
     "Question #197 Topic 2": {

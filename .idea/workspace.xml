@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0dab02c-0527-4727-82c1-23c8f25d8e58" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/awsCloudPractitioner.json" beforeDir="false" afterPath="$PROJECT_DIR$/awsCloudPractitioner.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examTopics.js" beforeDir="false" afterPath="$PROJECT_DIR$/examTopics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playground.js" beforeDir="false" afterPath="$PROJECT_DIR$/playground.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,83 +30,94 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="60" column="23" lean-forward="true" selection-end-line="73" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="awsCloudPractitioner.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/awsCloudPractitioner.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="8092" column="253" selection-start-line="8092" selection-start-column="253" selection-end-line="8092" selection-end-column="253" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="examTopics.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examTopics.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="217" column="25" lean-forward="true" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="25" />
-              <folding>
-                <element signature="n#!!block;n#typeQuestionSet#0" />
-                <element signature="n#!!block;n#fillAQuestionNames#0" />
-                <element signature="e#2612#2814#0" />
-                <element signature="n#!!block;n#countPropAnswers#0" />
-                <element signature="n#!!block;n#isAnswerChecked#0" />
-                <element signature="n#!!block;n#composeCheckboxAnswer#0" />
-                <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
-                <element signature="n#!!block;n#submitAnswer#0" />
-                <element signature="n#!!block;n#next#0" />
-                <element signature="n#!!block;n#previous#0" />
-                <element signature="n#!!block;n#finish#0" />
-                <element signature="n#!!block;n#markQuestionAsPassed#0" />
-                <element signature="n#!!block;n#finishTest#0" />
-                <element signature="e#8107#8241#0" />
-                <element signature="n#!!block;n#hideExplanations#0" />
-                <element signature="n#!!block;n#showHideExplanation#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playground.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playground.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="3" selection-start-column="3" selection-end-line="220" selection-end-column="1" />
-              <folding>
-                <element signature="n#!!block;n#fetchJson#0" />
-                <element signature="n#!!block;n#typeQuestionSet#0" />
-                <element signature="n#!!block;n#fillAQuestionNames#0" />
-                <element signature="n#!!block;n#chooseQuestions#0" />
-                <element signature="e#1556#1572#0" />
-                <element signature="n#!!block;n#countPropAnswers#0" />
-                <element signature="n#!!block;n#isAnswerChecked#0" />
-                <element signature="n#!!block;n#composeCheckboxAnswer#0" />
-                <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
-                <element signature="n#!!block;n#submitAnswer#0" />
-                <element signature="n#!!block;n#next#0" />
-                <element signature="n#!!block;n#previous#0" />
-                <element signature="n#!!block;n#finish#0" />
-                <element signature="n#!!block;n#markQuestionAsPassed#0" />
-                <element signature="n#!!block;n#finishTest#0" />
-                <element signature="e#7072#7088#0" />
-                <element signature="e#8354#8362#0" />
-                <element signature="n#!!block;n#showExplanation#0" />
-                <element signature="e#4942#5079#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="527">
+                  <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="awsCloudPractitioner.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/awsCloudPractitioner.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="476">
+                  <caret line="70" column="6" lean-forward="true" selection-end-line="70" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="playground.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/playground.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="23" lean-forward="true" selection-end-line="225" selection-end-column="1" />
+                  <folding>
+                    <element signature="n#!!block;n#typeQuestionSet#0" />
+                    <element signature="e#895#1216#0" />
+                    <element signature="e#1288#1420#0" />
+                    <element signature="e#1500#1765#0" />
+                    <element signature="n#!!block;n#fillAQuestionNames#0" />
+                    <element signature="n#!!block;n#determineQuestionSet#0" />
+                    <element signature="n#!!block;n#countPropAnswers#0" />
+                    <element signature="n#!!block;n#isAnswerChecked#0" />
+                    <element signature="e#3229#3272#0" />
+                    <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
+                    <element signature="n#!!block;n#submitAnswer#0" />
+                    <element signature="e#4031#4300#0" />
+                    <element signature="n#!!block;n#next#0" />
+                    <element signature="n#!!block;n#previous#0" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="examTopics.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/examTopics.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="678">
+                  <caret line="225" column="1" selection-start-line="225" selection-start-column="1" selection-end-line="225" selection-end-column="1" />
+                  <folding>
+                    <element signature="n#!!block;n#typeQuestionSet#0" />
+                    <element signature="e#994#1315#0" />
+                    <element signature="e#1387#1519#0" />
+                    <element signature="e#1599#1864#0" />
+                    <element signature="n#!!block;n#fillAQuestionNames#0" />
+                    <element signature="n#!!block;n#determineQuestionSet#0" />
+                    <element signature="n#!!block;n#countPropAnswers#0" />
+                    <element signature="n#!!block;n#isAnswerChecked#0" />
+                    <element signature="e#3354#3397#0" />
+                    <element signature="n#!!block;n#composeCheckboxAnswer#0" />
+                    <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
+                    <element signature="n#!!block;n#submitAnswer#0" />
+                    <element signature="e#4156#4425#0" />
+                    <element signature="n#!!block;n#next#0" />
+                    <element signature="n#!!block;n#previous#0" />
+                    <element signature="n#!!block;n#finish#0" />
+                    <element signature="n#!!block;n#markQuestionAsPassed#0" />
+                    <element signature="n#!!block;n#finishTest#0" />
+                    <element signature="n#!!block;n#hideExplanations#0" />
+                    <element signature="n#!!block;n#showHideExplanation#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,6 +145,11 @@
       <find>onclick</find>
       <find>console</find>
       <find>Question #198 Topic</find>
+      <find>Question #95 Topic 2</find>
+      <find>Question #196 Topic 2</find>
+      <find>Question #9 Topic 1</find>
+      <find>Question #42 Topic 2</find>
+      <find>Question #133 Topic 2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,10 +161,10 @@
         <option value="$PROJECT_DIR$/.idea/playground.js" />
         <option value="$PROJECT_DIR$/examTopicsAwsCloudPractitioner401-454.json" />
         <option value="$PROJECT_DIR$/jsonRewriter.js" />
-        <option value="$PROJECT_DIR$/playground.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/examTopics.js" />
         <option value="$PROJECT_DIR$/awsCloudPractitioner.json" />
+        <option value="$PROJECT_DIR$/playground.js" />
+        <option value="$PROJECT_DIR$/examTopics.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -164,9 +183,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="128" />
-    <option name="y" value="-1076" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-20" />
+    <option name="y" value="-1023" />
     <option name="width" value="1918" />
     <option name="height" value="1078" />
   </component>
@@ -282,15 +301,15 @@
       <updated>1600854112523</updated>
       <workItem from="1600854118954" duration="131803000" />
       <workItem from="1601651656209" duration="832000" />
-      <workItem from="1602160524297" duration="61374000" />
+      <workItem from="1602160524297" duration="69914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194009000" />
+    <option name="totallyTimeSpent" value="202549000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="128" y="-1076" width="1918" height="1078" extended-state="0" />
+    <frame x="-2" y="-1088" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -298,15 +317,15 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50215286" side_tool="true" visible="true" weight="0.33510637" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.32881" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.29317698" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81606764" weight="0.31329113" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49784714" visible="true" weight="0.33510637" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4978678" visible="true" weight="0.32881" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23089343" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22867803" />
       <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.32881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -334,18 +353,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/playground.js</url>
-          <line>57</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/playground.js</url>
-          <line>194</line>
+          <line>2</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -361,25 +379,24 @@
         <state relative-caret-position="3536">
           <caret line="208" selection-start-line="208" selection-end-line="208" />
           <folding>
-            <element signature="n#!!block;n#fetchJson#0" />
             <element signature="n#!!block;n#typeQuestionSet#0" />
+            <element signature="e#895#1216#0" />
+            <element signature="e#1288#1420#0" />
+            <element signature="e#1500#1765#0" />
             <element signature="n#!!block;n#fillAQuestionNames#0" />
-            <element signature="n#!!block;n#chooseQuestions#0" />
-            <element signature="e#1556#1572#0" />
+            <element signature="n#!!block;n#determineQuestionSet#0" />
             <element signature="n#!!block;n#countPropAnswers#0" />
             <element signature="n#!!block;n#isAnswerChecked#0" />
-            <element signature="n#!!block;n#composeCheckboxAnswer#0" />
+            <element signature="e#3229#3272#0" />
             <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
             <element signature="n#!!block;n#submitAnswer#0" />
+            <element signature="e#4031#4300#0" />
             <element signature="n#!!block;n#next#0" />
             <element signature="n#!!block;n#previous#0" />
-            <element signature="n#!!block;n#finish#0" />
-            <element signature="n#!!block;n#markQuestionAsPassed#0" />
-            <element signature="n#!!block;n#finishTest#0" />
-            <element signature="e#7072#7088#0" />
-            <element signature="e#8354#8362#0" />
-            <element signature="n#!!block;n#showExplanation#0" />
-            <element signature="e#4942#5079#0" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -406,25 +423,24 @@
         <state relative-caret-position="1054">
           <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
           <folding>
-            <element signature="n#!!block;n#fetchJson#0" />
             <element signature="n#!!block;n#typeQuestionSet#0" />
+            <element signature="e#895#1216#0" />
+            <element signature="e#1288#1420#0" />
+            <element signature="e#1500#1765#0" />
             <element signature="n#!!block;n#fillAQuestionNames#0" />
-            <element signature="n#!!block;n#chooseQuestions#0" />
-            <element signature="e#1556#1572#0" />
+            <element signature="n#!!block;n#determineQuestionSet#0" />
             <element signature="n#!!block;n#countPropAnswers#0" />
             <element signature="n#!!block;n#isAnswerChecked#0" />
-            <element signature="n#!!block;n#composeCheckboxAnswer#0" />
+            <element signature="e#3229#3272#0" />
             <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
             <element signature="n#!!block;n#submitAnswer#0" />
+            <element signature="e#4031#4300#0" />
             <element signature="n#!!block;n#next#0" />
             <element signature="n#!!block;n#previous#0" />
-            <element signature="n#!!block;n#finish#0" />
-            <element signature="n#!!block;n#markQuestionAsPassed#0" />
-            <element signature="n#!!block;n#finishTest#0" />
-            <element signature="e#7072#7088#0" />
-            <element signature="e#8354#8362#0" />
-            <element signature="n#!!block;n#showExplanation#0" />
-            <element signature="e#4942#5079#0" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -496,70 +512,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playground.js">
+    <entry file="file://$PROJECT_DIR$/awsCloudPractitioner.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-line="220" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#fetchJson#0" />
-            <element signature="n#!!block;n#typeQuestionSet#0" />
-            <element signature="n#!!block;n#fillAQuestionNames#0" />
-            <element signature="n#!!block;n#chooseQuestions#0" />
-            <element signature="e#1556#1572#0" />
-            <element signature="n#!!block;n#countPropAnswers#0" />
-            <element signature="n#!!block;n#isAnswerChecked#0" />
-            <element signature="n#!!block;n#composeCheckboxAnswer#0" />
-            <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
-            <element signature="n#!!block;n#submitAnswer#0" />
-            <element signature="n#!!block;n#next#0" />
-            <element signature="n#!!block;n#previous#0" />
-            <element signature="n#!!block;n#finish#0" />
-            <element signature="n#!!block;n#markQuestionAsPassed#0" />
-            <element signature="n#!!block;n#finishTest#0" />
-            <element signature="e#7072#7088#0" />
-            <element signature="e#8354#8362#0" />
-            <element signature="n#!!block;n#showExplanation#0" />
-            <element signature="e#4942#5079#0" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="70" column="6" lean-forward="true" selection-end-line="70" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/playground.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="60" column="23" lean-forward="true" selection-end-line="73" selection-end-column="7" />
+        <state relative-caret-position="187">
+          <caret line="11" column="23" lean-forward="true" selection-end-line="225" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#typeQuestionSet#0" />
+            <element signature="e#895#1216#0" />
+            <element signature="e#1288#1420#0" />
+            <element signature="e#1500#1765#0" />
+            <element signature="n#!!block;n#fillAQuestionNames#0" />
+            <element signature="n#!!block;n#determineQuestionSet#0" />
+            <element signature="n#!!block;n#countPropAnswers#0" />
+            <element signature="n#!!block;n#isAnswerChecked#0" />
+            <element signature="e#3229#3272#0" />
+            <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
+            <element signature="n#!!block;n#submitAnswer#0" />
+            <element signature="e#4031#4300#0" />
+            <element signature="n#!!block;n#next#0" />
+            <element signature="n#!!block;n#previous#0" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examTopics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="217" column="25" lean-forward="true" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="25" />
+        <state relative-caret-position="678">
+          <caret line="225" column="1" selection-start-line="225" selection-start-column="1" selection-end-line="225" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#typeQuestionSet#0" />
+            <element signature="e#994#1315#0" />
+            <element signature="e#1387#1519#0" />
+            <element signature="e#1599#1864#0" />
             <element signature="n#!!block;n#fillAQuestionNames#0" />
-            <element signature="e#2612#2814#0" />
+            <element signature="n#!!block;n#determineQuestionSet#0" />
             <element signature="n#!!block;n#countPropAnswers#0" />
             <element signature="n#!!block;n#isAnswerChecked#0" />
+            <element signature="e#3354#3397#0" />
             <element signature="n#!!block;n#composeCheckboxAnswer#0" />
             <element signature="n#!!block;n#composeRadiobuttonAnswer#0" />
             <element signature="n#!!block;n#submitAnswer#0" />
+            <element signature="e#4156#4425#0" />
             <element signature="n#!!block;n#next#0" />
             <element signature="n#!!block;n#previous#0" />
             <element signature="n#!!block;n#finish#0" />
             <element signature="n#!!block;n#markQuestionAsPassed#0" />
             <element signature="n#!!block;n#finishTest#0" />
-            <element signature="e#8107#8241#0" />
             <element signature="n#!!block;n#hideExplanations#0" />
             <element signature="n#!!block;n#showHideExplanation#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/awsCloudPractitioner.json">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="8092" column="253" selection-start-line="8092" selection-start-column="253" selection-end-line="8092" selection-end-column="253" />
+        <state relative-caret-position="527">
+          <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
         </state>
       </provider>
     </entry>
