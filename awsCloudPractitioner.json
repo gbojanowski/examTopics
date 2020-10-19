@@ -10136,7 +10136,7 @@
           "chosen": false
         },
         "B. Enable automatic patching for the instances using the Amazon RDS console.": {
-          "correct": true,
+          "correct": false,
           "chosen": false
         },
         "C. In AWS Config, configure a rule for the instances and the required patch level.": {
@@ -10144,11 +10144,11 @@
           "chosen": false
         },
         "D. Use AWS Systems Manager to automate database patching according to a schedule.": {
-          "correct": false,
+          "correct": true,
           "chosen": false
         }
       },
-      "explanation": "Reference: https://aws.amazon.com/rds/faqs/",
+      "explanation": "A. is not the most efficient way. You could do it like that, but other answer is more efficient. </br> B. Would work great for RDS. But we are talking about EC2. </br> C. <a href=\"https://aws.amazon.com/config/\">AWS Config </a> is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. Therefore - not to actually perform any updates</br>. D. <a href=\"https://aws.amazon.com/systems-manager/\">AWS Systems Manager</a> enables you to automate operational tasks to help make your teams more efficient. With automated playbooks along with rich text descriptions, you can reduce human error and simplify maintenance and deployment tasks on AWS resources.",
       "discussions": "10"
     },
     "Question #182 Topic 2": {
